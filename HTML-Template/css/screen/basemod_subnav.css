@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ *
+ * (en) Screen layout for YAML examples
+ * (de) Bildschirmlayout für YAML-Beispiele
+ *
+ * @copyright       Copyright 2005-2008, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.0.6
+ * @revision        $Revision: 202 $
+ * @lastmodified    $Date: 2008-06-07 14:29:18 +0200 (Sa, 07 Jun 2008) $
+ */
+
+@media screen, projection
+{
+  /*------------------------------------------------------------------------------------------------------*/
+
+  #nav_sub {
+  width: 100%; /* Einfassen der Floats im IE */
+  float:left; /* Einfassen der Floats in allen anderen Browsern */
+  background: #4e5155 url("../../yaml/navigation/images/shiny_buttons/background_active.gif") repeat-x bottom right;
+/*   border-top: 1px #666 solid; */
+  line-height: 0px;
+  font-size: 90%;
+  height: 1.5em; /* 2.2em; */
+  overflow:hidden;
+  }
+
+  #nav_sub ul {
+  float:left;
+  display:inline; /* Fix für IE Doubled Float Margin Bug */
+  margin:0; /* Standard-Listendefinition zurücksetzen */
+  padding: 0;
+  margin-left: 21px; /* Abstand des ersten Buttons vom linken Rand (-2 Pixel für 3D-Schatten) über basemod.css anpassen */
+
+  border-left: 0px #aaa solid;
+  border-right: 0px #fff solid;
+  border-bottom: #f00 1px solid;
+  }
+  
+  #nav_sub ul li {
+  float: left;
+  display:inline; /* Fix für IE Doubled Float Margin Bug */
+  margin: 0;
+  padding: 0;
+  font-size: 1.0em;
+  line-height: 1em;
+  list-style-type: none;
+  border-left: 0px #fff solid;
+  border-right: 0px #aaa solid;
+  }
+  
+  #nav_sub ul li a {
+  display:block;
+  width: auto;
+  font-size: 1em;
+  font-weight: normal;
+  background: transparent;
+  text-decoration: none;
+  color: #aaa;
+  margin: 0;
+  padding: 0.25em 0.4em 0.6em 0.8em; /* 0.6em 0.8em; */
+  }
+  
+  #nav_sub ul li a:focus,
+  #nav_sub ul li a:hover,
+  #nav_sub ul li a:active {
+  color: #fff;
+  text-decoration: none;
+  background: #4e5155 url("../../yaml/navigation/images/shiny_buttons/background_active.gif") repeat-x top right;
+  }
+  
+  #nav_sub ul li .selected {
+    color: #fff;
+    font-weight: bold;
+    background: transparent;
+    text-decoration: none;
+  }
+  
+  #nav_sub ul li .selected a {
+    color: #fff;
+    font-weight: bold;
+    background: transparent;
+    text-decoration: none;
+  }
+  #nav_sub ul li .selected a:focus,
+  #nav_sub ul li .selected a:hover,
+  #nav_sub ul li .selected a:active {
+    background: #4e5155 url("../../yaml/navigation/images/shiny_buttons/background_active.gif") repeat-x top right; 
+  }
+}

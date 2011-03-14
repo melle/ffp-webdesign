@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ *
+ * (en) Variation of screen layout (basemod.css) for layout example "2col_right_seo"
+ * (de) Variation des Screenlayouts (basemod.css) für Layoutbeispiel "2col_right_seo"
+ *
+ * @copyright       Copyright 2005-2008, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.0.6
+ * @revision        $Revision: 202 $
+ * @lastmodified    $Date: 2008-06-07 14:29:18 +0200 (Sa, 07 Jun 2008) $
+ */
+
+@media screen, projection
+{
+
+/***********
+ * Article *
+ ***********/
+
+.entry-meta {
+  margin-bottom: 0.7em;
+}
+
+.entry-meta a {
+  color:#777777;
+}
+
+.entry-meta ul {
+  margin: 0;
+}
+
+.entry-meta li {
+  list-style-type: none;
+  display: inline;
+  margin-left: 0em;
+  color:#BBBBBB;
+}
+
+.meta-start {
+  background:transparent url(../../images/time.png) no-repeat scroll left top;
+  padding:2px 0 2px 20px;
+}
+
+.meta-edit a {
+	border: none;
+	padding: 2px;
+	padding-left: 23px;
+	background: url('../../images/pencil.png') left center no-repeat;
+	height: 16px;
+}
+	
+.meta-tags {
+  background:transparent url(../../images/tag_blue.png) no-repeat scroll left top;
+  padding:2px 0 2px 20px;
+}
+
+.meta-comments {
+  background:transparent url(../../images/comment.png) no-repeat scroll left top;
+  padding:2px 0 2px 20px;
+}
+
+.navigation {
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 3em;
+}
+
+.alignleft {
+  float:left;
+}
+
+.alignright {
+  float:right;
+}
+
+/********
+ * Post *
+ ********/
+.post-info {
+  padding: 1em;
+  margin: 1em;
+  color: #777;
+  background-color:#F8F8F8;
+  border-bottom:1px solid #999;
+  border-top:1px solid #999;
+}
+
+.post-info a {
+  color: #555;
+}
+
+#commentbox ul {
+  list-style-type: none;
+}
+
+.comment-meta {
+  background:transparent url(../../images/time.png) no-repeat scroll left top;
+  padding:0px 0 2px 20px;
+  color:#BBBBBB;
+}
+
+.comment-meta a {
+  color:#777777;
+}
+
+.comment_text {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+
+/***********
+ * Content *
+ ***********/
+h2,h3,h4,h5,h6 {
+  margin-top: 0.7em;
+}
+
+
+blockquote p:before {
+  content:open-quote;
+  font-size: 1.5em;
+}
+
+blockquote p:after {
+  content:close-quote;
+  font-size: 1.5em;
+}
+
+/***********
+ * Sidebar *
+ ***********/
+.sidebar ul, .sidebar li, .sidebar ol, .sidebar dl {
+  margin: 0;
+  list-style-type:none;
+}
+
+.widget ul, .widget li{
+  line-height: 1.5em;
+  margin: 0;
+  list-style-type:none;
+}
+.widget ul li:before {
+  content: "\00BB \0020";
+}
+
+
+}

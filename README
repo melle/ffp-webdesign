@@ -1,0 +1,14 @@
+Freifunk Potsdam webseite templates and skins
+=============================================
+
+This projects contains the templates and skins for the Freifunk Potsdam
+websites. You'll find 
+
+- a wordpress template
+- a mediawiki a mediawiki skin
+- some static html pages
+
+All web applications share the same design to fake a unified application 
+user experience.
+The webdesign is based on a yaml 3.0.6 example project, see http://yaml.de
+

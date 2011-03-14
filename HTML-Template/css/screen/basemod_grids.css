@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/**
+ * (en) Variation of screen layout (basemod.css) for flexible grids
+ * (de) Variation des Screenlayouts (basemod.css) für flexible grids
+ */
+
+@media screen, projection
+{
+  .subcolumns a { color: #888; font-weight: normal; background:transparent; }
+  .subcolumns a:focus, 
+  .subcolumns a:hover,
+  .subcolumns a:active {color: #888; background-color: transparent; text-decoration:underline;}
+
+  .subcolumns ul {
+    list-style: none;
+    margin-left: 0;
+  }
+
+  .subcolumns li {
+    margin-left: 0;
+  }
+
+  .subcolumns ul li:before {
+    content: "\00BB \0020";
+  }
+
+  .subcolumns h1, .subcolumns h2, .subcolumns h3, .subcolumns h4, .subcolumns h5, .subcolumns h6 {
+    border-bottom:1px solid #aaa;
+  }
+
+  .coolsubcol {
+    background: #EEE none repeat scroll 0 0;
+    border-top: 5px solid #999;
+    color: #555;
+    padding-top: 15px;
+    margin-top: 2em;
+  }
+
+  .coolsubcol .subcl {padding: 0 0 0 10px}
+  .coolsubcol .subcr {padding: 0 10px 0 10px}
+
+}

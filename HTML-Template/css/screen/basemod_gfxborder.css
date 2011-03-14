@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ *
+ * (en) Variation of screen layout (basemod.css) - graphic layout border "3col_gfxborder"
+ * (de) Variation des Screenlayouts (basemod.css) - Grafische Layoutumrandung "3col_gfxborder"
+ *
+ * @copyright       Copyright 2005-2008, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.0.6
+ * @revision        $Revision: 202 $
+ * @lastmodified    $Date: 2008-06-07 14:29:18 +0200 (Sa, 07 Jun 2008) $
+ */
+
+@media screen, projection
+{
+  body { background: #3b69ad; }
+
+  #page_margins {
+    border: 0 none;
+    background-image:  url(../../images/border_left.gif);
+    background-repeat:repeat-y;
+    background-position:left;
+  }
+
+  #page {
+    border: 0 none;
+    margin: 0 0 0 5px; 
+    padding: 10px 5px 10px 0px;
+    background-image:  url(../../images/border_right.gif);
+    background-repeat:repeat-y;
+    background-position:right;
+  }
+
+
+  #border-top {
+    overflow:hidden;
+    width: auto;
+    height: 20px;
+    font-size:0;
+    margin-bottom: -15px;
+    background-image:  url(../../images/border_top.gif);
+    background-repeat:repeat-x;
+    background-position:top left;
+  }
+
+  #border-bottom {
+    overflow:hidden;
+    width: auto;
+    height: 20px;
+    margin-top: -15px;
+    font-size:0;
+    background-image:  url(../../images/border_bottom.gif);
+    background-repeat:repeat-x;
+    background-position:bottom left;
+  }
+
+  #edge-tl {
+    float:left;
+    width: 20px;
+    height: 20px;
+    font-size:0;
+    background-image:  url(../../images/corner_tl.gif);
+    background-position: top left;
+  }
+
+  #edge-tr {
+    position:relative; /* IE Fix | z-index */
+    float:right;
+    width: 20px;
+    height: 20px;
+    font-size:0;
+    background-image:  url(../../images/corner_tr.gif);
+    background-position: top right;
+  }
+
+  #edge-bl {
+    float:left;
+    width: 20px;
+    height: 20px;
+    background-image:  url(../../images/corner_bl.gif);
+    background-position: bottom left;
+  }
+
+  #edge-br {
+    position:relative; /* IE Fix | z-index */
+    float:right;
+    width: 20px;
+    height: 20px;
+    background-image:  url(../../images/corner_br.gif);
+    background-position: bottom right;
+  }
+}

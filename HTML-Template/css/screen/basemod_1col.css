@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ *
+ * (en) Variation of screen layout (basemod.css) for layout example "2col_right_seo"
+ * (de) Variation des Screenlayouts (basemod.css) für Layoutbeispiel "2col_right_seo"
+ *
+ * @copyright       Copyright 2005-2008, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.0.6
+ * @revision        $Revision: 202 $
+ * @lastmodified    $Date: 2008-06-07 14:29:18 +0200 (Sa, 07 Jun 2008) $
+ */
+
+@media screen, projection
+{
+  /**
+   * (en) Repositioning content container
+   * (de) Neupositionierung der Content Container
+   *
+   * |-------------------------------|
+   * | #header                       |
+   * |-------------------------------|
+   * | #col1                         |
+   * | 90%                           |
+   * |-------------------------------|
+   * | #footer                       |
+   * |-------------------------------|
+   */
+
+  /* #col1 becomes the main column | #col1 wird zur Hauptinhaltsspalte */
+  #col1 { width: 90%; /* float:left */}
+  #col1_content { padding: 10px 10px 10px 20px; }
+
+  /* #col2 is turned off | #col2 abschalten */
+  #col2 { display:none; }
+
+  /* #col3 becomes the right column | #col3 wird zur rechten Spalte */
+  #col3 { margin: 10px 20px 10px 20px; }
+  #col3_content { margin: 0px; padding: 0px; }
+
+  #main { }
+}

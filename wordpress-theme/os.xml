@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+	<ShortName>Freifunk Potsdam Blog</ShortName>
+	<Description>Use blog.freifunk-potsdam.de to search on blog.</Description>
+	<Url type="text/html" method="get" template="http://blog.freifunk-potsdam.de/?s={searchTerms}"></Url>
+	<Contact>info@freifunk-potsdam.de</Contact>
+	<LongName>Freifunk Potsdam Weblog Search</LongName>
+	<Image height="16" width="16" type="image/x-icon">http://blog.freifunk-potsdam.de/favicon.ico</Image>
+	<Tags>Weblog Wifi wireless LAN WLAN Freifunk</Tags>
+	<Url type="application/atom+xml" template="http://blog.freifunk-potsdam.de/?q={searchTerms}&amp;pw={startPage?}&amp;format=atom"/>
+	<Url type="application/rss+xml" template="http://blog.freifunk-potsdam.de/?q={searchTerms}&amp;pw={startPage?}&amp;format=rss"/>
+	<Url type="text/html" template="http://blog.freifunk-potsdam.de/?q={searchTerms}&amp;pw={startPage?}"/>
+	<Query role="example" searchTerms="blog"/>
+	<Developer>Freifunk Potdam Webdevelopers</Developer>
+	<Attribution>
+	    Search data Copyright 2008, blog.freifunk-potsdam, All Rights Reserved
+	</Attribution>
+	<SyndicationRight>open</SyndicationRight>
+	<AdultContent>false</AdultContent>
+	<Language>de-DE</Language>
+	<OutputEncoding>UTF-8</OutputEncoding>
+	<InputEncoding>UTF-8</InputEncoding>
+</OpenSearchDescription>
