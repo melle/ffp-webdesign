@@ -49,7 +49,7 @@ class FreifunkTemplate extends QuickTemplate {
 
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="<?php $this->text('xhtmldefaultnamespace') ?>" <?php 
+<html xmlns="<?php $this->text('xhtmldefaultnamespace') ?>" <?php
 	foreach($this->data['xhtmlnamespaces'] as $tag => $ns) {
 		?>xmlns:<?php echo "{$tag}=\"{$ns}\" ";
 	} ?>xml:lang="<?php $this->text('lang') ?>" lang="<?php $this->text('lang') ?>" dir="<?php $this->text('dir') ?>">
@@ -61,9 +61,9 @@ class FreifunkTemplate extends QuickTemplate {
                 <!--[if lte IE 7]>
                 <link href="<?php $this->text('stylepath') ?>/<?php $this->text('stylename') ?>/css/central_patches.css" rel="stylesheet" type="text/css" />
                 <![endif]-->
-                        
+
 		<?php print Skin::makeGlobalVariablesScript( $this->data ); ?>
-                
+
 		<script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('stylepath' ) ?>/common/wikibits.js?<?php echo $GLOBALS['wgStyleVersion'] ?>"><!-- wikibits js --></script>
 		<!-- Head Scripts -->
 <?php $this->html('headscripts') ?>
@@ -102,7 +102,7 @@ class FreifunkTemplate extends QuickTemplate {
                                 $personalUrls .= "<a href=\"";
 				$personalUrls .= htmlspecialchars($item['href']);
                                 $personalUrls .= "\"";
-                                $personalUrls .= $skin->tooltipAndAccesskey('pt-'.$key);
+                                $personalUrls .= $skin->tooltipAndAccesskeyAttribs('pt-'.$key);
 				if(!empty($item['class'])) {
                                     $personalUrls .= "class=\"";
 				    $personalUrls .= htmlspecialchars($item['class']);
@@ -121,7 +121,7 @@ class FreifunkTemplate extends QuickTemplate {
 	         	<div id="headerbg">
                         </div>
                         <h1>Freifunk Potsdam | Wiki</h1>
-                        <span>Die freie WLAN-Community aus Potsdam &#8226; Internet für alle!</span>    
+                        <span>Die freie WLAN-Community aus Potsdam &#8226; Internet für alle!</span>
                 </div>
 		<!-- begin: main navigation #nav -->
 		<div id="nav"> <a id="navigation" name="navigation"></a>
@@ -130,7 +130,7 @@ class FreifunkTemplate extends QuickTemplate {
 				<ul>
 					<li><a href="http://blog.freifunk-potsdam.de/">Neues</a></li>
 					<li id="current"><a href="<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href'])?>"<?php
-			echo $skin->tooltipAndAccesskey('n-mainpage') ?>>Wiki</a></li>
+			echo $skin->tooltipAndAccesskeyAttribs('n-mainpage') ?>>Wiki</a></li>
 					<li><a href="http://forum.freifunk-potsdam.de/">Forum</a></li>
 					<li><a href="http://karte.freifunk-potsdam.de/">Karte</a></li>
 				</ul>
@@ -159,7 +159,7 @@ class FreifunkTemplate extends QuickTemplate {
 				 	&& in_array( $key, array( 'edit', 'watch', 'unwatch' ))) {
 				 		echo $skin->tooltip( "ca-$key" );
 				 	} else {
-				 		echo $skin->tooltipAndAccesskey( "ca-$key" );
+				 		echo $skin->tooltipAndAccesskeyAttribs( "ca-$key" );
 				 	}
 				 	echo '>'.htmlspecialchars($tab['text']).'</a></span></li>';
 				} ?>
@@ -200,8 +200,8 @@ class FreifunkTemplate extends QuickTemplate {
                         <div class="subcolumns coolsubcol">
                           <div class="c33l">
                             <div class="subcl">
-<?php 
-                              $sidebar = $this->data['sidebar'];		
+<?php
+                              $sidebar = $this->data['sidebar'];
                               if ( !isset( $sidebar['TOOLBOX'] ) ) $sidebar['TOOLBOX'] = true;
                               if ( !isset( $sidebar['LANGUAGES'] ) ) $sidebar['LANGUAGES'] = true;
                               foreach ($sidebar as $boxName => $cont) {
@@ -221,7 +221,7 @@ class FreifunkTemplate extends QuickTemplate {
                                       $this->toolbox();
                                   } elseif ( $boxName == 'LANGUAGES' ) {
                                       $this->languageBox();
-                                  } 
+                                  }
                               }
 ?>
                             </div>
@@ -230,7 +230,7 @@ class FreifunkTemplate extends QuickTemplate {
                             <div class="subcr">
                               <h3>Metainfo</h3>
                               <ul>
-<?php 		
+<?php
 		$footerlinks = array(
 			'lastmod', 'viewcount', 'numberofwatchingusers', 'credits', 'copyright',
 			'privacy', 'about', 'disclaimer', 'tagline',
@@ -280,23 +280,23 @@ class FreifunkTemplate extends QuickTemplate {
 		if($this->data['notspecialpage']) { ?>
 				<li id="t-whatlinkshere"><a href="<?php
 				echo htmlspecialchars($this->data['nav_urls']['whatlinkshere']['href'])
-				?>"<?php echo $this->skin->tooltipAndAccesskey('t-whatlinkshere') ?>><?php $this->msg('whatlinkshere') ?></a></li>
+				?>"<?php echo $this->skin->tooltipAndAccesskeyAttribs('t-whatlinkshere') ?>><?php $this->msg('whatlinkshere') ?></a></li>
 <?php
 			if( $this->data['nav_urls']['recentchangeslinked'] ) { ?>
 				<li id="t-recentchangeslinked"><a href="<?php
 				echo htmlspecialchars($this->data['nav_urls']['recentchangeslinked']['href'])
-				?>"<?php echo $this->skin->tooltipAndAccesskey('t-recentchangeslinked') ?>><?php $this->msg('recentchangeslinked') ?></a></li>
+				?>"<?php echo $this->skin->tooltipAndAccesskeyAttribs('t-recentchangeslinked') ?>><?php $this->msg('recentchangeslinked') ?></a></li>
 <?php 		}
 		}
 		if(isset($this->data['nav_urls']['trackbacklink'])) { ?>
 			<li id="t-trackbacklink"><a href="<?php
 				echo htmlspecialchars($this->data['nav_urls']['trackbacklink']['href'])
-				?>"<?php echo $this->skin->tooltipAndAccesskey('t-trackbacklink') ?>><?php $this->msg('trackbacklink') ?></a></li>
+				?>"<?php echo $this->skin->tooltipAndAccesskeyAttribs('t-trackbacklink') ?>><?php $this->msg('trackbacklink') ?></a></li>
 <?php 	}
 		if($this->data['feeds']) { ?>
 			<li id="feedlinks"><?php foreach($this->data['feeds'] as $key => $feed) {
 					?><span id="feed-<?php echo Sanitizer::escapeId($key) ?>"><a href="<?php
-					echo htmlspecialchars($feed['href']) ?>"<?php echo $this->skin->tooltipAndAccesskey('feed-'.$key) ?>><?php echo htmlspecialchars($feed['text'])?></a>&nbsp;</span>
+					echo htmlspecialchars($feed['href']) ?>"<?php echo $this->skin->tooltipAndAccesskeyAttribs('feed-'.$key) ?>><?php echo htmlspecialchars($feed['text'])?></a>&nbsp;</span>
 					<?php } ?></li><?php
 		}
 
@@ -304,18 +304,18 @@ class FreifunkTemplate extends QuickTemplate {
 
 			if($this->data['nav_urls'][$special]) {
 				?><li id="t-<?php echo $special ?>"><a href="<?php echo htmlspecialchars($this->data['nav_urls'][$special]['href'])
-				?>"<?php echo $this->skin->tooltipAndAccesskey('t-'.$special) ?>><?php $this->msg($special) ?></a></li>
+				?>"<?php echo $this->skin->tooltipAndAccesskeyAttribs('t-'.$special) ?>><?php $this->msg($special) ?></a></li>
 <?php		}
 		}
 
 		if(!empty($this->data['nav_urls']['print']['href'])) { ?>
 				<li id="t-print"><a href="<?php echo htmlspecialchars($this->data['nav_urls']['print']['href'])
-				?>"<?php echo $this->skin->tooltipAndAccesskey('t-print') ?>><?php $this->msg('printableversion') ?></a></li><?php
+				?>"<?php echo $this->skin->tooltipAndAccesskeyAttribs('t-print') ?>><?php $this->msg('printableversion') ?></a></li><?php
 		}
 
 		if(!empty($this->data['nav_urls']['permalink']['href'])) { ?>
 				<li id="t-permalink"><a href="<?php echo htmlspecialchars($this->data['nav_urls']['permalink']['href'])
-				?>"<?php echo $this->skin->tooltipAndAccesskey('t-permalink') ?>><?php $this->msg('permalink') ?></a></li><?php
+				?>"<?php echo $this->skin->tooltipAndAccesskeyAttribs('t-permalink') ?>><?php $this->msg('permalink') ?></a></li><?php
 		} elseif ($this->data['nav_urls']['permalink']['href'] === '') { ?>
 				<li id="t-ispermalink"<?php echo $this->skin->tooltip('t-ispermalink') ?>><?php $this->msg('permalink') ?></li><?php
 		}
@@ -329,7 +329,7 @@ class FreifunkTemplate extends QuickTemplate {
 
 	/*************************************************************************************************/
 	function languageBox() {
-		if( $this->data['language_urls'] ) { 
+		if( $this->data['language_urls'] ) {
 ?>
 	<div id="p-lang" class="portlet">
 		<h3><?php $this->msg('otherlanguages') ?></h3>
@@ -355,7 +355,7 @@ class FreifunkTemplate extends QuickTemplate {
 <?php 			foreach($cont as $key => $val) { ?>
 				<li id="<?php echo Sanitizer::escapeId($val['id']) ?>"<?php
 					if ( $val['active'] ) { ?> class="active" <?php }
-				?>><a href="<?php echo htmlspecialchars($val['href']) ?>"<?php echo $this->skin->tooltipAndAccesskey($val['id']) ?>><?php echo htmlspecialchars($val['text']) ?></a></li>
+				?>><a href="<?php echo htmlspecialchars($val['href']) ?>"<?php echo $this->skin->tooltipAndAccesskeyAttribs($val['id']) ?>><?php echo htmlspecialchars($val['text']) ?></a></li>
 <?php			} ?>
 			</ul>
 <?php   } else {
