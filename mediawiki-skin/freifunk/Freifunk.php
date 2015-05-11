@@ -17,7 +17,7 @@ if( !defined( 'MEDIAWIKI' ) )
  */
 class SkinFreifunk extends SkinTemplate {
 	/** Using freifunk. */
-	function initPage( &$out ) {
+	function initPage( OuputPage $out ) {
 		SkinTemplate::initPage( $out );
 		$this->skinname  = 'freifunk';
 		$this->stylename = 'freifunk';
